@@ -10,11 +10,11 @@ export class ProductComponent {
             itemsHTML += `
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading${item.target}">
-                        <button class="accordion-button ${isFirst ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${item.target}" aria-expanded="${isFirst}" aria-controls="collapse${item.target}">
+                        <button class="accordion-button ${isFirst ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${item.target}">
                             ${item.title}
                         </button>
                     </h2>
-                    <div id="collapse${item.target}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" aria-labelledby="heading${item.target}" data-bs-parent="#siriAccordion">
+                    <div id="collapse${item.target}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#siriAccordion">
                         <div class="accordion-body">
                             ${item.body}
                         </div>
@@ -37,9 +37,11 @@ export class ProductComponent {
                             <h2 class="card-title fw-bold mb-3">${data.title}</h2>
                             <p class="card-text text-muted mb-4">${data.description}</p>
 
-                            <div class="accordion" id="siriAccordion">
+                            <div class="accordion mb-4" id="siriAccordion">
                                 ${this.getAccordionItems(data.accordion)}
                             </div>
+
+                            <button class="btn btn-primary siri-btn px-4" id="btn-extra-details">Подробнее о функции</button>
 
                         </div>
                     </div>
@@ -48,8 +50,12 @@ export class ProductComponent {
         `;
     }
 
-    render(data) {
+    // Принимаем функцию moreDetailsListener из страницы
+    render(data, moreDetailsListener) {
         const html = this.getHTML(data);
         this.parent.insertAdjacentHTML('beforeend', html);
+
+        // Вешаем слушатель на новую кнопку
+        document.getElementById('btn-extra-details').addEventListener('click', moreDetailsListener);
     }
 }
