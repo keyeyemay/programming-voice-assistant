@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Siri Intents App</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/examples/jsm/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg apple-navbar">
+        <div class="container">
+            <a class="navbar-brand" id="logo-link"><span class="siri-gradient">Siri</span> Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/keyeyemay" target="_blank">О проекте</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Возможности</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="root"></div>
+    </main>
+
+    <footer class="apple-footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 <span class="siri-gradient">Siri</span> Intents Project. Лабораторная работа.</p>
+        </div>
+    </footer>
+
+    <script src="main.js" type="module"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
