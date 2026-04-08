@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Калькулятор Siri</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <nav class="glass-nav">
+    <div class="logo">SiriCalc Pro</div>
+    <ul class="nav-links">
+      <li><a href="#">Главная</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="btn_bg_color" class="action-btn nav-btn">Сменить фон</button>
+      <a href="https://github.com/keyeyemay" target="_blank" class="action-btn nav-btn">GitHub</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="info-block glass-panel">
+      <p>Цель ЛР 2: <mark>JavaScript</mark> программирование логики.</p>
+      <details class="author-details">
+        <summary>Автор</summary>
+        <p>ФИО: Абидов Бобур</p>
+        <p>Группа: ИУ5-42Б</p>
+      </details>
+    </div>
+
+    <div class="calc-wrapper glass-panel">
+      <div id="result" class="result">0</div>
+
+      <div>
+        <div class="btn-row">
+          <button id="btn_mem_plus" class="my-btn secondary">M+</button>
+          <button id="btn_mem_minus" class="my-btn secondary">M-</button>
+          <button id="btn_mem_recall" class="my-btn secondary">MR</button>
+          <button id="btn_color_out" class="my-btn secondary">🎨</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn_op_sqrt" class="my-btn math-btn">√</button>
+          <button id="btn_op_square" class="my-btn math-btn">x²</button>
+          <button id="btn_op_fact" class="my-btn math-btn">x!</button>
+          <button id="btn_op_backspace" class="my-btn math-btn">⌫</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn_op_clear" class="my-btn secondary">C</button>
+          <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+          <button id="btn_op_percent" class="my-btn secondary">%</button>
+          <button id="btn_op_div" class="my-btn primary">/</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn_digit_7" class="my-btn">7</button>
+          <button id="btn_digit_8" class="my-btn">8</button>
+          <button id="btn_digit_9" class="my-btn">9</button>
+          <button id="btn_op_mult" class="my-btn primary">x</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn_digit_4" class="my-btn">4</button>
+          <button id="btn_digit_5" class="my-btn">5</button>
+          <button id="btn_digit_6" class="my-btn">6</button>
+          <button id="btn_op_minus" class="my-btn primary">-</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn_digit_1" class="my-btn">1</button>
+          <button id="btn_digit_2" class="my-btn">2</button>
+          <button id="btn_digit_3" class="my-btn">3</button>
+          <button id="btn_op_plus" class="my-btn primary">+</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="btn_digit_0" class="my-btn">0</button>
+          <button id="btn_digit_000" class="my-btn">000</button>
+          <button id="btn_digit_dot" class="my-btn">.</button>
+          <button id="btn_op_equal" class="my-btn primary">=</button>
+        </div>
+
+        <div class="btn-row" style="margin-top: 15px;">
+          <button id="btn_custom_rnd" class="my-btn siri-btn" style="width: 100%;">Генерация случайного числа Siri</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <p>ЛР выполнена Абидовым Бобуром</p>
+    </div>
+  </footer>
+</body>
+</html>
